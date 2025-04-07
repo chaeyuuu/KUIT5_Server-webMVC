@@ -51,8 +51,8 @@
         </ul>
 
         <div class="col-md-3 text-end">
-            <a href="/user/login.html" type="button" class="btn btn-outline-primary me-2">Login</a>
-            <a href="/user/form.html" type="button" class="btn btn-primary">Sign-up</a>
+            <a href="/user/login.jsp" type="button" class="btn btn-outline-primary me-2">Login</a>
+            <a href="/user/form.jsp" type="button" class="btn btn-primary">Sign-up</a>
         </div>
     </header>
 </div>
@@ -65,7 +65,7 @@
                 <div class="wrap">
                     <div class="main">
                         <strong class="subject">
-                            <a href="./qna/show.html"> 객체지향을 가장 잘 다룬 책이 뭐가 있나요? </a>
+                            <a href="qna/show.jsp"> 객체지향을 가장 잘 다룬 책이 뭐가 있나요? </a>
                         </strong>
                         <div class="auth-info">
                             <i class="icon-add-comment"></i>
@@ -84,7 +84,7 @@
                 <div class="wrap">
                     <div class="main">
                         <strong class="subject">
-                            <a href="./qna/show.html"> 객체지향에서 가장 중요하다고 생각하는 것이 무엇인가요? </a>
+                            <a href="qna/show.jsp"> 객체지향에서 가장 중요하다고 생각하는 것이 무엇인가요? </a>
                         </strong>
                         <div class="auth-info">
                             <i class="icon-add-comment"></i>
@@ -118,7 +118,7 @@
                 </ul>
             </div>
             <div class="col-md-2 qna-write">
-                <a href="./qna/form.html" class="btn btn-primary pull-right" role="button">질문하기</a>
+                <a href="qna/form.jsp" class="btn btn-primary pull-right" role="button">질문하기</a>
             </div>
         </div>
     </div>
