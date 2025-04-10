@@ -1,5 +1,6 @@
-package controller;
+package core.web;
 
+import controller.Controller;
 import core.web.RequestMapper;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
