@@ -12,33 +12,28 @@ import jwp.model.User;
 
 import java.io.IOException;
 
-@WebServlet("/user/updateForm")
-public class UpdateFormController extends HttpServlet {
+public class UpdateFormController implements Controller {
     private static final String USER_SESSION_KEY = "user";
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String handle(HttpServletRequest req, HttpServletResponse res) {
         HttpSession session = req.getSession();
-
         User sessionUser = (User) session.getAttribute(USER_SESSION_KEY);
 
         if (sessionUser == null) {
-            resp.sendRedirect("/user/login.jsp");
-            return;
+            return "redirect:/user/login.jsp";
         }
 
         String userId = req.getParameter("userId");
         if (!sessionUser.isSameUser(userId)) {
-            resp.sendRedirect("/user/userList");
             System.out.println("본인이 아니므로 수정 불가");
-            return;
+            return "redirect:/user/userList";
         }
 
         User user = MemoryUserRepository.getInstance().findUserById(userId);
 
         req.setAttribute("user", user);
-        RequestDispatcher rd = req.getRequestDispatcher("/user/updateForm.jsp");
-        rd.forward(req,resp);
+        return "/user/updateForm.jsp";
 
     }
 }

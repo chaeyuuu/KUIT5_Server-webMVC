@@ -9,22 +9,12 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/user/logout")
-public class LogoutController extends HttpServlet {
+public class LogoutController implements Controller {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logout(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logout(req, resp);
-    }
-
-    private void logout(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public String handle(HttpServletRequest req, HttpServletResponse res) {
         HttpSession session = req.getSession();
         session.removeAttribute("user");
-        resp.sendRedirect("/");
+        return "redirect:/";
     }
 }
