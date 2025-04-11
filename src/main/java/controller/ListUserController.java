@@ -18,6 +18,6 @@ public class ListUserController implements Controller {
     public String handle(HttpServletRequest req, HttpServletResponse res) {
         Collection<User> users = MemoryUserRepository.getInstance().findAll();
         req.setAttribute("users", users);
-        return "/user/list.jsp";
+        return "/WEB-INF/user/list.jsp";
     }
 }

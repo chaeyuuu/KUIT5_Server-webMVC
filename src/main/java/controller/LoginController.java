@@ -26,7 +26,7 @@ public class LoginController implements Controller {
             session.setAttribute("user", user);
             return "redirect:/";
         } else {
-            return "/user/login_failed.jsp";
+            return "/WEB-INF/user/login_failed.jsp";
         }
     }
 }

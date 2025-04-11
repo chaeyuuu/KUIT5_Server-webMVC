@@ -10,7 +10,6 @@ import jwp.model.User;
 
 import java.io.IOException;
 
-@WebServlet("/user/update")
 public class UpdateUserController implements Controller {
 
     @Override

@@ -13,6 +13,6 @@ public class HomeController implements Controller {
 
     @Override
     public String handle(HttpServletRequest req, HttpServletResponse res) {
-        return "/home.jsp";
+        return "/WEB-INF/home.jsp";
     }
 }

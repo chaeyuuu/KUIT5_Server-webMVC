@@ -21,7 +21,7 @@ public class UpdateFormController implements Controller {
         User sessionUser = (User) session.getAttribute(USER_SESSION_KEY);
 
         if (sessionUser == null) {
-            return "redirect:/user/login.jsp";
+            return "redirect:/WEB-INF/user/login.jsp";
         }
 
         String userId = req.getParameter("userId");
@@ -33,7 +33,7 @@ public class UpdateFormController implements Controller {
         User user = MemoryUserRepository.getInstance().findUserById(userId);
 
         req.setAttribute("user", user);
-        return "/user/updateForm.jsp";
+        return "/WEB-INF/user/updateForm.jsp";
 
     }
 }
