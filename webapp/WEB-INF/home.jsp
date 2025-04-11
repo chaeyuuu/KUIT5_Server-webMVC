@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KUIT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
@@ -51,16 +51,14 @@
         </ul>
 
         <div class="col-md-3 text-end">
-            <%--            <a href="/user/login.jsp" type="button" class="btn btn-outline-primary me-2">Login</a>--%>
-            <%--            <a href="/user/form.jsp" type="button" class="btn btn-primary">Sign-up</a>--%>
             <c:choose>
                 <c:when test="${not empty sessionScope.user}">
                     <a href="/user/logout" role="button" class="btn btn-outline-primary me-2">Log-Out</a>
                     <a href="/user/updateForm?userId=${sessionScope.user.userId}" role="button" class="btn btn-primary">개인정보수정</a>
                 </c:when>
                 <c:otherwise>
-                    <a href="/user/login.jsp" type="button" class="btn btn-outline-primary me-2">Log-In</a>
-                    <a href="/user/form.jsp" type="button" class="btn btn-primary">Sign-up</a>
+                    <a href="/user/login" type="button" class="btn btn-outline-primary me-2">Log-In</a>
+                    <a href="/user/form" type="button" class="btn btn-primary">Sign-up</a>
                 </c:otherwise>
             </c:choose>
         </div>
@@ -75,7 +73,7 @@
                 <div class="wrap">
                     <div class="main">
                         <strong class="subject">
-                            <a href="qna/show.jsp"> 객체지향을 가장 잘 다룬 책이 뭐가 있나요? </a>
+                            <a href="qna/show"> 객체지향을 가장 잘 다룬 책이 뭐가 있나요? </a>
                         </strong>
                         <div class="auth-info">
                             <i class="icon-add-comment"></i>
@@ -94,7 +92,7 @@
                 <div class="wrap">
                     <div class="main">
                         <strong class="subject">
-                            <a href="qna/show.jsp"> 객체지향에서 가장 중요하다고 생각하는 것이 무엇인가요? </a>
+                            <a href="qna/show"> 객체지향에서 가장 중요하다고 생각하는 것이 무엇인가요? </a>
                         </strong>
                         <div class="auth-info">
                             <i class="icon-add-comment"></i>
@@ -128,13 +126,13 @@
                 </ul>
             </div>
             <div class="col-md-2 qna-write">
-                <a href="qna/form.jsp" class="btn btn-primary pull-right" role="button">질문하기</a>
+                <a href="qna/form" class="btn btn-primary pull-right" role="button">질문하기</a>
             </div>
         </div>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>
